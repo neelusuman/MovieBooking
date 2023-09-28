@@ -14,6 +14,7 @@ mongoose.connect(dbConfig.DB_URL,()=>{
 },err=>{
     console.log("Error:",err.message)
 })
+
 app.get('/',(req,res)=>{
     res.send({title:'Movie Booking'})
 })
