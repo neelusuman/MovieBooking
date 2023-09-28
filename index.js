@@ -14,7 +14,9 @@ mongoose.connect(dbConfig.DB_URL,()=>{
 },err=>{
     console.log("Error:",err.message)
 })
-
+app.get('/',(req,res)=>{
+    res.send({title:'Movie Booking'})
+})
 
 require("./routes/movie.routes")(app);
 require("./routes/theatre.routes")(app);
