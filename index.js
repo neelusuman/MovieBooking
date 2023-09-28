@@ -15,7 +15,6 @@ mongoose.connect(dbConfig.DB_URL,()=>{
     console.log("Error:",err.message)
 })
 
-app.get("./")
 require("./routes/movie.routes")(app);
 require("./routes/theatre.routes")(app);
 require("./routes/auth.routes")(app);
